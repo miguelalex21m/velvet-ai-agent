@@ -177,3 +177,27 @@ docker push <region>.ocir.io/<tenancy>/velvet-ai-agent:latest
 - ✅ Archivos Docker preparados (Dockerfile, .dockerignore)
 - ✅ Documentación de deploy en OCI completa
 - 🔄 Deploy en OCI (pendiente - requiere cuenta OCI y ejecución)
+
+## Evidencias de funcionamiento
+
+### Respuestas del agente
+
+La aplicación responde preguntas basadas en la documentación corporativa de Velvet Spa.
+
+![Preguntas y respuestas](docs/evidencia_preguntas.jpeg)
+
+### Evidencia adicional
+
+![Evidencia adicional](docs/evidencia2.jpeg)
+
+### Evidencia OCI
+
+Durante el despliegue en Oracle Cloud Infrastructure (OCI) se presentó una limitación de capacidad en la región seleccionada.
+
+![Error OCI](docs/evidencia_oci.jpeg)
+
+### Video demostrativo
+
+Se incluye un video de evidencia dentro del repositorio:
+
+`docs/video_evidencia.mp4`
