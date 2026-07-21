@@ -112,11 +112,58 @@ Luego abre tu navegador en `http://localhost:5000`
 
 ---
 
-## Deploy
+## Deploy en Oracle Cloud Infrastructure (OCI)
 
-La aplicación está preparada para desplegarse en Oracle Cloud Infrastructure (OCI) como una solución accesible desde la nube.
+### Requisitos Previos
 
-> Se puede complementar con una captura de pantalla o un enlace público una vez que el despliegue esté listo.
+1. **Cuenta OCI gratuita**: https://www.oracle.com/cloud/free/
+2. **Docker instalado** en tu máquina local
+3. **API Key de Google Gemini** (configurada en `.env`)
+
+### Instrucciones de Deploy
+
+#### 1. Configurar Variables de Entorno
+
+```bash
+cp .env.example .env
+# Editar .env con tu API key de Google Gemini
+```
+
+#### 2. Construir Imagen Docker
+
+```bash
+docker build -t velvet-ai-agent .
+```
+
+#### 3. Probar Localmente
+
+```bash
+docker run -p 8501:8501 --env-file .env velvet-ai-agent
+```
+
+Accede a `http://localhost:8501` para verificar que funciona.
+
+#### 4. Subir a OCI Registry
+
+```bash
+# Login en OCI Registry
+docker login <region>.ocir.io
+
+# Tag de la imagen
+docker tag velvet-ai-agent <region>.ocir.io/<tenancy>/velvet-ai-agent:latest
+
+# Push al registry
+docker push <region>.ocir.io/<tenancy>/velvet-ai-agent:latest
+```
+
+#### 5. Desplegar en OCI
+
+1. Ve a **OCI Console** → **Developer Services** → **Applications**
+2. Crea nueva aplicación usando la imagen Docker
+3. Configura variables de entorno (GOOGLE_API_KEY)
+4. Deploy y espera a que esté disponible
+
+> **Evidencia del Deploy**: [Pendiente - Agregar enlace público o captura de pantalla]
 
 ---
 
@@ -126,5 +173,7 @@ La aplicación está preparada para desplegarse en Oracle Cloud Infrastructure (
 - ✅ Estructura del proyecto organizada
 - ✅ Agente capaz de responder preguntas sobre información interna
 - ✅ Preparado para GitHub y despliegue en la nube
-- ✅ Interfaz web con Flask
-- 🔄 Deploy en OCI (pendiente)
+- ✅ Interfaz web con Flask y Streamlit
+- ✅ Archivos Docker preparados (Dockerfile, .dockerignore)
+- ✅ Documentación de deploy en OCI completa
+- 🔄 Deploy en OCI (pendiente - requiere cuenta OCI y ejecución)

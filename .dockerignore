@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.qodo/
+.idea/
+
+# Environment variables
+.env
+
+# ChromaDB local (se regenerará en el contenedor)
+chroma_db/
+
+# Tests
+tests/
+.pytest_cache/
+
+# Documentation
+README.md
+.windsurf/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
