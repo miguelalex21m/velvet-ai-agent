@@ -201,3 +201,34 @@ Durante el despliegue en Oracle Cloud Infrastructure (OCI) se presentó una limi
 Se incluye un video de evidencia dentro del repositorio:
 
 `docs/video_evidencia.mp4`
+
+
+## Despliegue en la nube
+
+Aplicación disponible en:
+
+https://velvet-ai-agent-qsnjbp2wpplhv79vudlkup.streamlit.app/
+
+## Evidencia de despliegue en Streamlit Cloud
+
+La aplicación fue desplegada exitosamente en Streamlit Cloud y responde preguntas basadas en los documentos corporativos cargados.
+
+### Captura de pantalla de la aplicación
+
+![Aplicación funcionando](docs/fotopruebade%20streamlit.jpeg)
+
+### Video de demostración
+
+[Ver video de demostración](docs/videodepruebastreamlit.mp4)
+
+### Evidencias adicionales
+
+![Preguntas realizadas](docs/evidencia_preguntas.jpeg)
+
+![Evidencia adicional](docs/evidencia2.jpeg)
+
+### Evidencia OCI
+
+Durante el desarrollo se intentó realizar el despliegue en Oracle Cloud Infrastructure (OCI), pero la región seleccionada no tenía capacidad disponible para instancias Always Free.
+
+![Evidencia OCI](docs/evidencia_oci.jpeg)
